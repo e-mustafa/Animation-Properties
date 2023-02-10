@@ -1,0 +1,167 @@
+
+*{
+   box-sizing: border-box;
+   padding: 0;
+}
+
+body{
+   min-height: 100vh;
+
+   padding: 8px;
+   overflow: hidden;
+   perspective: 700px;
+   background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+h1{
+   text-align: center;
+   margin: 10px;
+   color: #1d02bb;
+   text-shadow: 3px 2px 5px #ffffff;
+}
+.main{
+   position: relative;
+   height: 135px;
+}
+
+.main div {
+   width: 275px;
+   padding: 10px;
+   text-align: center;
+   margin-bottom: 10px;
+   border-radius: 10px;
+   color: white;
+   -webkit-animation: move-1 3s ease-in-out forwards;
+   animation: move-1 3s ease-in-out forwards;
+   background:linear-gradient(90deg, #EE82EE 10%, #00D1FF 100%);
+   box-shadow: -22px 11px 20px #323232;
+   position: absolute;
+   top: 0;
+   z-index: 5;
+}
+.main div:hover {
+   box-shadow: -2px 1px 1px #323232;
+   animation-play-state: paused;
+   transform: translateY(5px) !important;
+   -webkit-transform: translateY(5px) !important;
+   -moz-transform: translateY(5px) !important;
+   -ms-transform: translateY(5px) !important;
+   -o-transform: translateY(5px) !important;
+}
+
+.main span{
+   display: inline-block;
+   border: 25px solid transparent;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: -1;
+}
+.main:hover span{
+   animation-play-state: paused;
+}
+
+.main .div-1 span, .main .div-3 span, .main .div-5 span{
+   left: -48px;
+   border-right: 25px solid #ee82ee;
+   -webkit-animation: arrow-left 4s backwards ;
+   animation: arrow-left 4s backwards ;
+   animation-delay: inherit;
+}
+.main .div-2 span, .main .div-4 span, .main .div-6 span{
+   right: -48px;
+   border-left: 25px solid #08cfff;
+   -webkit-animation: arrow-right 4s backwards;
+   animation: arrow-right 4s backwards;
+   animation-delay: inherit;
+}
+.main p{
+   font-size: 18px;
+   text-shadow: 3px 2px 5px #373737;
+   margin: 10px 0;
+}
+
+
+.section-2{
+   position: absolute;
+   top: 0;
+   width: 98%;
+   height: 100%;
+}
+.proparty-main{
+   position: relative;
+   height: 135px;
+}
+.proparty-main > div{
+   width: 275px;
+   position: absolute;
+   top: 0;
+   color: white;
+   text-align: center;
+   padding: 10px;
+   margin-top: 70px;
+   box-shadow: inset -1px 1px 2px 2px #666666;
+   -webkit-border-radius: 7px;
+   -moz-border-radius: 7px;
+   -ms-border-radius: 7px;
+   -o-border-radius: 7px;
+   border-radius: 7px;
+}
+.proparty-main h3{
+   text-shadow: 3px 2px 5px #373737;
+}
+.main .div-1, .proparty-main .div-1{
+   left: 2%;
+}
+.main .div-2, .proparty-main .div-2{
+   left: 78%;
+   animation-direction: reverse;
+   animation-delay: 3s;
+}
+.main .div-3, .proparty-main .div-3{
+   left: 2%;
+   animation-delay: 6s;
+}
+.main .div-4, .proparty-main .div-4{
+   left: 78%;
+   animation-direction: reverse;
+   animation-delay: 9s;
+}
+.main .div-5, .proparty-main .div-5{
+   left: 2%;
+   animation-delay: 12s;
+}
+.main .div-6, .proparty-main .div-6{
+   left: 78%;
+   animation-direction: reverse;
+   animation-delay: 15s;
+   margin-bottom: 0;
+}
+
+
+@keyframes move-1 {
+   0%{
+      left: 2%;
+      -webkit-transform: rotateY(0deg);
+      -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      -o-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+   }
+   100%{
+      left: 78%;
+      -webkit-transform: rotateY(360deg);
+      -moz-transform: rotateY(360deg);
+      -ms-transform: rotateY(360deg);
+      -o-transform: rotateY(360deg);
+      transform: rotateY(360deg);
+   }
+}
+
+@keyframes arrow-left {
+   0%{ left: 0; }
+   100%{ left: -48px; }
+}
+@keyframes arrow-right {
+   0%{ right: 0; }
+   100%{ right: -48px; }
+}
