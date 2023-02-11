@@ -6,7 +6,6 @@
 
 body{
    min-height: 100vh;
-
    padding: 8px;
    overflow: hidden;
    perspective: 700px;
@@ -17,6 +16,8 @@ h1{
    margin: 10px;
    color: #1d02bb;
    text-shadow: 3px 2px 5px #ffffff;
+   -webkit-animation: puls 2s ease-out;
+   animation: puls 1s ease-out;
 }
 .main{
    position: relative;
@@ -41,11 +42,11 @@ h1{
 .main div:hover {
    box-shadow: -2px 1px 1px #323232;
    animation-play-state: paused;
-   transform: translateY(5px) !important;
    -webkit-transform: translateY(5px) !important;
    -moz-transform: translateY(5px) !important;
    -ms-transform: translateY(5px) !important;
    -o-transform: translateY(5px) !important;
+   transform: translateY(5px) !important;
 }
 
 .main span{
@@ -92,7 +93,7 @@ h1{
    height: 135px;
 }
 .proparty-main > div{
-   width: 275px;
+   width: 270px;
    position: absolute;
    top: 0;
    color: white;
@@ -109,31 +110,35 @@ h1{
 .proparty-main h3{
    text-shadow: 3px 2px 5px #373737;
 }
+.proparty-main .div-2, .proparty-main .div-4, .proparty-main .div-6{
+   left: 78.5%;
+}
 .main .div-1, .proparty-main .div-1{
    left: 2%;
+   animation-delay: 2s;
 }
-.main .div-2, .proparty-main .div-2{
+.main .div-2{
    left: 78%;
    animation-direction: reverse;
-   animation-delay: 3s;
+   animation-delay: 5s;
 }
 .main .div-3, .proparty-main .div-3{
    left: 2%;
-   animation-delay: 6s;
+   animation-delay: 8s;
 }
-.main .div-4, .proparty-main .div-4{
+.main .div-4{
    left: 78%;
    animation-direction: reverse;
-   animation-delay: 9s;
+   animation-delay: 11s;
 }
 .main .div-5, .proparty-main .div-5{
    left: 2%;
-   animation-delay: 12s;
+   animation-delay: 14s;
 }
-.main .div-6, .proparty-main .div-6{
+.main .div-6{
    left: 78%;
    animation-direction: reverse;
-   animation-delay: 15s;
+   animation-delay: 17s;
    margin-bottom: 0;
 }
 
@@ -164,4 +169,36 @@ h1{
 @keyframes arrow-right {
    0%{ right: 0; }
    100%{ right: -48px; }
+}
+
+
+@keyframes puls {
+   0%{
+      -webkit-transform: scale(1) translateY(0) rotateX(0);
+      -moz-transform: scale(1) translateY(0) rotateX(0);
+      -ms-transform: scale(1) translateY(0) rotateX(0);
+      -o-transform: scale(1) translateY(0) rotateX(0);
+      transform: scale(1) translateY(0) rotateX(0);
+}
+   50%{
+      -webkit-transform: scale(1.5) translateY(50px) rotateX(360deg);
+      -moz-transform: scale(1.5) translateY(50px) rotateX(360deg);
+      -ms-transform: scale(1.5) translateY(50px) rotateX(360deg);
+      -o-transform: scale(1.5) translateY(50px) rotateX(360deg);
+      transform: scale(1.5) translateY(50px) rotateX(360deg);
+}
+   60%{
+      -webkit-transform: scale(1.5) translateY(50px) rotateX(360deg);
+      -moz-transform: scale(1.5) translateY(50px) rotateX(360deg);
+      -ms-transform: scale(1.5) translateY(50px) rotateX(360deg);
+      -o-transform: scale(1.5) translateY(50px) rotateX(360deg);
+      transform: scale(1.5) translateY(50px) rotateX(360deg);
+}
+   100%{
+      -webkit-transform: scale(1) translateY(0) rotateX(0);
+      -moz-transform: scale(1) translateY(0) rotateX(0);
+      -ms-transform: scale(1) translateY(0) rotateX(0);
+      -o-transform: scale(1) translateY(0) rotateX(0);
+      transform: scale(1) translateY(0) rotateX(0);
+}
 }
